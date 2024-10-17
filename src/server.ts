@@ -48,3 +48,4 @@ async function main() {
 // 1. Improve error handling, remove eslint disable
 // 2. Validate input
 // 3. implement auto restart on file save for saving dev time
+// 4. improve readme
