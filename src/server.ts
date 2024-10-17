@@ -12,10 +12,6 @@ async function main() {
 
   const connector = await initializeBinanceConnector();
 
-  app.get("/", (req: Request, res: Response) => {
-    res.send("hello");
-  });
-
   // GET /data?symbol=""&range=""
   app.get("/data", async (req: Request, res: Response) => {
     const symbol = req.query.symbol;
