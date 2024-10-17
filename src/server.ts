@@ -1,13 +1,19 @@
-import express from "express";
+import express, { Express, Request, Response } from "express";
+import { initializeBinanceConnector } from "./services/data.service";
 
-const app = express();
+void main();
 
-const port = 3000;
+async function main() {
+  const app: Express = express();
+  const port = 3000;
 
-app.get("/", (req, res) => {
-    res.send("hello")
-});
+  await initializeBinanceConnector();
 
-app.listen(port, () => {
-    console.log(`Server is running on localhost:${port}`)
-})
+  app.get("/", (req: Request, res: Response) => {
+    res.send("hello");
+  });
+
+  app.listen(port, () => {
+    console.log(`Server is running on localhost:${port}`);
+  });
+}
