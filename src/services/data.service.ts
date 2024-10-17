@@ -57,4 +57,4 @@ const fetchMarketDataForSymbol =
   };
 
 const formatPercent = (percent: string): string =>
-  String(Number(percent) * 100) + "%";
+  (Number(percent) * 100).toString() + "%";
